@@ -22,9 +22,13 @@ li {
   padding: 0;
   color: #452a39;
   font-size: 14px;
-  text-transform: capitalize;
+
   font-weight: 100;
   line-height: 1.3;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
 .weather-temperature img {
   width: 150px;
