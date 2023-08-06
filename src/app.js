@@ -25,15 +25,7 @@ function formatDate(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }
@@ -61,6 +53,7 @@ function displayForecast(response) {
            <span class="forecast-temperature-maximum">${Math.round(
              forecastDay.temp.max
            )}°</span>
+           <br>
            <span class="forecast-temperature-minimum">${Math.round(
              forecastDay.temp.min
            )}°</span>
@@ -122,4 +115,4 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("New York");
+search("La Mision");
